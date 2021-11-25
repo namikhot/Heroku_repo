@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from ONLY_WORK_IN_HERE.frontend_main import basic_function
 
 app = FastAPI()
 
@@ -14,4 +15,5 @@ app.add_middleware(
 
 @app.get("/")
 def index():
-    return {"greeting": "Hello world"}
+    s = basic_function()
+    return {"greeting": s}
